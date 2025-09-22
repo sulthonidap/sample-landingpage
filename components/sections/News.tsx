@@ -5,11 +5,10 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
-import { db } from '@/lib/db';
-import type { News as NewsType } from '@/lib/types';
+import type { NewsItem } from '@/lib/data';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
-function getLatestPortfolio(): NewsType[] {
+function getLatestPortfolio(): NewsItem[] {
   // Static data for portfolio projects PT Aghna Partnership
   return [
     {

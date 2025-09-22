@@ -7,8 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ConsultationButton } from '@/components/ui/ConsultationButton';
 import { ShoppingCart } from 'lucide-react';
-import { db } from '@/lib/db';
-import type { Product } from '@/lib/types';
+import type { Product } from '@/lib/data';
 import { useState } from 'react';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 

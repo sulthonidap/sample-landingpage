@@ -2,70 +2,15 @@ import Link from 'next/link';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowLeft } from 'lucide-react';
-import { db } from '@/lib/db';
-import type { News } from '@/lib/types';
+import { staticNews } from '@/lib/data';
 
 export const metadata = {
-  title: 'News - TechVision Solutions',
-  description: 'Latest news and updates from TechVision Solutions',
+  title: 'Portfolio - PT Aghna Partnership',
+  description: 'Portfolio dan karya terbaik PT Aghna Partnership dalam perencanaan konstruksi',
 };
 
-function getAllNews(): News[] {
-  // Static data for now - we'll implement proper database queries later
-  return [
-    {
-      id: 1,
-      title: 'Company Expands Operations',
-      content: 'We are excited to announce our expansion into new markets, bringing innovative solutions to more customers worldwide. This strategic move allows us to serve a broader customer base and deliver our cutting-edge technology solutions to emerging markets.',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg',
-      date: '2024-01-15',
-      created_at: '2024-01-15T00:00:00Z'
-    },
-    {
-      id: 2,
-      title: 'New Product Launch',
-      content: 'Introducing our latest product line designed to meet the evolving needs of our customers with cutting-edge technology. This revolutionary platform combines artificial intelligence with user-friendly design to deliver unprecedented performance.',
-      image: 'https://images.pexels.com/photos/3184327/pexels-photo-3184327.jpeg',
-      date: '2024-01-10',
-      created_at: '2024-01-10T00:00:00Z'
-    },
-    {
-      id: 3,
-      title: 'Industry Recognition',
-      content: 'Our company has been recognized as a leader in innovation by industry experts and peer organizations. This prestigious award reflects our commitment to excellence and continuous improvement in technology solutions.',
-      image: 'https://images.pexels.com/photos/3184633/pexels-photo-3184633.jpeg',
-      date: '2024-01-05',
-      created_at: '2024-01-05T00:00:00Z'
-    },
-    {
-      id: 4,
-      title: 'Partnership Announcement',
-      content: 'We are thrilled to announce our strategic partnership with leading technology companies to enhance our service offerings and expand our global reach.',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg',
-      date: '2023-12-28',
-      created_at: '2023-12-28T00:00:00Z'
-    },
-    {
-      id: 5,
-      title: 'Technology Innovation',
-      content: 'Our research and development team has achieved a breakthrough in quantum computing applications, opening new possibilities for our enterprise clients.',
-      image: 'https://images.pexels.com/photos/3184327/pexels-photo-3184327.jpeg',
-      date: '2023-12-20',
-      created_at: '2023-12-20T00:00:00Z'
-    },
-    {
-      id: 6,
-      title: 'Customer Success Story',
-      content: 'Learn how our solutions helped a Fortune 500 company increase their operational efficiency by 40% while reducing costs by 25%.',
-      image: 'https://images.pexels.com/photos/3184633/pexels-photo-3184633.jpeg',
-      date: '2023-12-15',
-      created_at: '2023-12-15T00:00:00Z'
-    }
-  ];
-}
-
 export default function NewsPage() {
-  const news = getAllNews();
+  const news = staticNews;
 
   return (
     <div className="min-h-screen bg-[#DDE4EB]">
