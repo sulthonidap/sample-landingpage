@@ -13,6 +13,14 @@ export const metadata: Metadata = {
   keywords: 'perencanaan konstruksi, masterplan, desain konstruksi, pengawasan, BIM, konsultasi konstruksi',
   authors: [{ name: 'PT Aghna Partnership' }],
   viewport: 'width=device-width, initial-scale=1',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/logo/logo.png', type: 'image/png' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/logo/logo.png',
+  },
 };
 
 export default function RootLayout({
