@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Calendar, ArrowLeft } from 'lucide-react';
 import { staticNews } from '@/lib/data';
 import { notFound } from 'next/navigation';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
 
 interface NewsDetailPageProps {
   params: {
@@ -38,7 +40,8 @@ export default function NewsDetailPage({ params }: NewsDetailPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-12 max-w-4xl">
+      <Header />
+      <div className="container mx-auto px-4 py-32 max-w-4xl">
         <div className="mb-8">
           <Link href="/news">
             <Button variant="ghost" className="mb-4">
@@ -80,6 +83,7 @@ export default function NewsDetailPage({ params }: NewsDetailPageProps) {
           </div>
         </article>
       </div>
+      <Footer />
     </div>
   );
 }

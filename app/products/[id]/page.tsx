@@ -5,6 +5,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowLeft, ShoppingCart, Star } from 'lucide-react';
 import { staticProducts } from '@/lib/data';
 import { notFound } from 'next/navigation';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
 
 interface ProductDetailPageProps {
   params: {
@@ -40,7 +42,8 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-12 max-w-6xl">
+      <Header />
+      <div className="container mx-auto px-4 py-32 max-w-6xl">
         <div className="mb-8">
           <Link href="/products">
             <Button variant="ghost" className="mb-4">
@@ -128,6 +131,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

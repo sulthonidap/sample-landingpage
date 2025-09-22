@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ShoppingCart, ArrowLeft } from 'lucide-react';
 import { staticProducts } from '@/lib/data';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
 
 export const metadata = {
   title: 'Layanan - PT Aghna Partnership',
@@ -15,7 +17,8 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-[#DDE4EB]">
-      <div className="container mx-auto px-4 py-12">
+      <Header />
+      <div className="container mx-auto px-4 py-32 md:px-32">
         <div className="mb-8">
           <Link href="/">
             <Button variant="ghost" className="mb-4">
@@ -58,6 +61,7 @@ export default function ProductsPage() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
