@@ -34,7 +34,7 @@ export async function createToken(admin: Admin): Promise<string> {
 export async function verifyToken(token: string): Promise<Admin | null> {
   try {
     const { payload } = await jwtVerify(token, JWT_SECRET);
-    return payload as Admin;
+    return payload as unknown as Admin;
   } catch {
     return null;
   }
