@@ -19,7 +19,7 @@ export function Footer() {
     >
 
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-32 py-16">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-1">
             <div className="flex items-center space-x-4 mb-6">

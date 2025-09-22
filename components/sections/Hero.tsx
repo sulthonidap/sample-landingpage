@@ -30,8 +30,8 @@ export function Hero() {
       <header className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50 transition-transform duration-300 ${
         isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
       }`}>
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
+        <div className="container mx-auto md:px-32">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
               <div className="relative w-12 h-12">
@@ -50,6 +50,10 @@ export function Hero() {
             </Link>
 
             {/* Desktop Navigation */}
+            
+
+            {/* CTA Button */}
+            <div className="hidden md:flex items-center space-x-4">
             <nav className="hidden md:flex items-center space-x-8">
               <Link href="/" className="text-gray-700 hover:text-[#F37526] transition-colors font-medium">
                 Home
@@ -61,9 +65,6 @@ export function Hero() {
                 Portfolio
               </Link>
             </nav>
-
-            {/* CTA Button */}
-            <div className="hidden md:flex items-center space-x-4">
               <ConsultationButton 
                 size="sm" 
                 className="bg-[#F37526] hover:bg-[#e56620] text-white"
@@ -83,8 +84,8 @@ export function Hero() {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden py-4 border-t border-gray-200">
-              <nav className="flex flex-col space-y-4">
+            <div className="md:hidden py-6 border-t border-gray-200">
+              <nav className="flex flex-col space-y-6">
                 <Link href="/" className="text-gray-700 hover:text-[#F37526] transition-colors font-medium">
                   Home
                 </Link>
@@ -109,7 +110,7 @@ export function Hero() {
       {/* Hero Section */}
       <section 
         ref={heroRef}
-        className={`relative h-screen flex items-center justify-center overflow-hidden pt-16 transition-all duration-1000 ${
+        className={`relative h-screen flex items-center justify-center overflow-hidden pt-20 pb-16 transition-all duration-1000 ${
           isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
@@ -120,9 +121,9 @@ export function Hero() {
           }}
         />
         
-        <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
+        <div className="relative z-10 text-center text-white px-6 py-16 max-w-5xl mx-auto">
           {/* Logo di Hero */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-16">
             <div className="relative w-24 h-24 md:w-40 md:h-40">
               <Image
                 src="/logo/logo.png"
@@ -134,16 +135,16 @@ export function Hero() {
             </div>
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-10 leading-tight">
             Solusi Perencanaan
             <span className="block text-[#F37526]"> Konstruksi Inovatif</span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl mb-12 text-gray-100 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl mb-16 text-gray-100 max-w-3xl mx-auto leading-relaxed">
             PT Aghna Partnership berkomitmen memberikan solusi perencanaan konstruksi yang inovatif dan terpercaya dengan pengalaman bertahun-tahun
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-8 justify-center">
             <Button 
               size="lg" 
               className="bg-[#F37526] hover:bg-[#e56620] text-white px-10 py-5 text-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
